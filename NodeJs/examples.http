@@ -1,0 +1,180 @@
+@local=http://localhost:8181
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDAwOTk1Njg3M2Q2MDEwYzRiZTgzYmUiLCJpc0FjdG9yIjp0cnVlLCJuYW1lIjoic2hpcmF6IiwiZmF2b3JpdGVzIjpbIjYwMDA4MTY3ZmZlMDE3NTYxODFlOTRmNCIsIjYwMDA4MWRkZmZlMDE3NTYxODFlOTRmNiJdLCJpYXQiOjE2MTA2NTUzMDd9.JNaiiDfrqsPWl-dHA6u7duiilsq4G8cLUwO81kv1zQE
+
+POST {{local}}/api/users
+Content-Type: application/json
+
+
+{
+    "name": "tomer",
+    "email": "tomeralayof@gmail.com",
+    "password": "tomeralayof@gmail.com",
+    "isActor": true
+}
+
+
+###
+POST {{local}}/api/login
+Content-Type: application/json
+
+{
+  "email": "shiraz2244@gmail.com",
+  "password": "shiraz2244@gmail.com"
+}
+
+
+###
+POST {{local}}/api/profile
+Content-Type: application/json
+x-auth-token: {{token}}
+
+{
+  "name": "tomer",
+  "lastName" : "alayof",
+  "school": "bar illan",
+  "height": "1.75",
+  "email": "tomeralayof@gmail.com",
+  "age": "25",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo veniam, temporibus praesentium minus, fuga quasi mollitia neque minima unde nesciunt debitis natus facilis repudiandae deserunt esse. Quis, quae deserunt illo consequatur esse placeat ipsa sit rerum vel magnam sapiente numquam debitis earum reiciendis iste iure aut saepe delectus tenetur! Porro!"  
+}
+
+
+
+
+### get favoties:
+GET {{local}}/api/favorites
+# Content-Type: application/json
+x-auth-token: {{token}}
+
+
+
+###get my user
+GET {{local}}/api/favorites/my-user/:id
+x-auth-token: {{token}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ### - get user for automatic fullfiling on create profile form
+# GET {{local}}/api/profile/user/5ffa2736e1188489dccb64ac
+# x-auth-token: {{token}}
+
+
+
+
+
+# ### 
+# GET {{local}}/api/profile
+# x-auth-token: {{token}}
+
+
+
+
+# ###
+# GET {{local}}/api/profile/5ff88709c517784510c258ce 
+# Content-Type: application/json
+# x-auth-token: {{token}}
+
+
+
+# ###
+# PUT  {{local}}/api/profile/5ff637e8936e1c54a0db593f
+# Content-Type: application/json
+# x-auth-token: {{token}}
+
+
+# {
+#   "name": "tomer",
+#   "lastName" : "alayof",
+#   "school": "bar illan",
+#   "height": "1.75",
+#   "age": "26",
+#   "description": "hi my name is shiraz i am 27 years old i live in beer sheva and i have many hobbis such as buying noa kirel clothes an wear them the all they cuz i am fuckking nigaaaaaaa"
+# }
+
+
+
+# ### - get a required profile from every user
+# GET {{local}}/api/profile/actor-single-profile/5ff8f410f6b9498ae8754691
+# x-auth-token: {{token}}
+
+
+
+
+
+
+
+# ### - get my profile details
+# GET  {{local}}/api/users/5ffa2736e1188489dccb64ac
+# x-auth-token: {{token}}
+
+
+# ###
+# PATCH {{local}}/api/users/5ffa2736e1188489dccb64ac
+# Content-Type: application/json
+# x-auth-token: {{token}}
+
+# ###
+# DELETE {{local}}/api/users/5ffcece6a8e1dd730cd60f9f
+# Content-Type: application/json
+# x-auth-token: {{token}}

@@ -1,0 +1,23 @@
+.name{
+  color: red;
+}
+
+
+.description{
+  font-size: 20px;
+}
+
+
+.desc{
+  opacity: 0.8;
+}
+
+
+.video{
+  width: 500px;
+  height: 300px;
+}
+
+.pic{
+  width: 50px;
+}
