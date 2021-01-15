@@ -6,6 +6,7 @@ axios.defaults.headers.common['x-auth-token'] = userService.sendToken();
 
 export function getMyUser(myId){
   return axios.get(`http://localhost:8181/api/users/${myId}`);
+  
 };
 
 
